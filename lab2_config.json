@@ -1,0 +1,6 @@
+{
+    "model": "gpt-3.5-turbo",
+    "static_dir": ["static_dir"],
+    "state_dir": ["state_dir"],
+    "output_dir": ["output_dir"]
+}
