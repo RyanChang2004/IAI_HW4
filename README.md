@@ -1,5 +1,5 @@
 # IAI_HW4
-# 📜 Game Report: Chaos Explorer - A Player's Guide 📜
+#  Game Report: Chaos Explorer - A Player's Guide 
 
 This is a turn-based text adventure game where your goal is to enhance your abilities, engage in strategic combat, and ultimately defeat the three powerful Chaos Bosses.
 
@@ -46,8 +46,8 @@ Combat is turn-based, alternating between the "Player Phase" and the "Enemy Phas
 
 Your Luck stat introduces random chance, potentially flipping the outcome of an attack or defense:
 
-* **✨ Good Luck (P\_good):** Flips an action that would have failed (e.g., being blocked, taking damage) into a success (hit, dodge). **Higher Luck increases this chance (up to 50%).**
-* **💥 Bad Luck (P\_bad):** Flips an action that would have succeeded (e.g., hitting the enemy, successful block) into a failure (blocked, hit). **Higher Luck decreases this chance.**
+* ** Good Luck (P\_good):** Flips an action that would have failed (e.g., being blocked, taking damage) into a success (hit, dodge). **Higher Luck increases this chance (up to 50%).**
+* ** Bad Luck (P\_bad):** Flips an action that would have succeeded (e.g., hitting the enemy, successful block) into a failure (blocked, hit). **Higher Luck decreases this chance.**
 
 ### 4. Escape Mechanism
 
@@ -76,3 +76,13 @@ The game is structured into three Chapters, each with a Boss you must defeat to 
 3.  **Chapter 3:** Defeat **[The Final Guardian] Gigantic Chaos Entity**
 
 After defeating the final Boss, you achieve the ultimate victory and can choose to start a new journey.
+
+## LLM Tasks Applied
+
+* **Story Generation (GPT-4):** Used for creating the opening background story, the expansive Boss victory narratives, and the final grand ending.
+* **Narrative Description (GPT-3.5):** Used for providing the detailed, atmospheric descriptions of combat encounters and the turn-by-turn battle results.
+* **Enemy AI / Decision Making (GPT-3.5):** Used within the combat loop to intelligently select the Monster's **Attack** and **Defense** body parts, often aiming to counter the player's potential actions.
+
+## Implementation Discovery
+
+While the LLM is primarily a creative tool, it can be reliably prompted to generate a constrained choice (e.g., selecting '1', '2', or '3') with a high success rate. This allows the model to act as a sophisticated *probabilistic AI* by framing the decision contextually, rather than just relying on simple random numbers. This process effectively offloads complex decision-making to the model, with a random selection used as a reliable fallback if the model fails to output a valid choice.
